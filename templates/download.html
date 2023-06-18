@@ -1,0 +1,46 @@
+{% include 'header.html' %}
+
+
+<h3 class='selectCategory text-center  sm:text-3xl text-2xl font-medium title-font mb-4 text-white ' > Latest Update  from  {% if title %}
+   {{ title|safe }}      
+   {% else %}
+   Post
+   {% endif %}</h3>
+<br>
+<div class="bottom-6 m-auto relative lg-32 mb-10 w-screen flex justify-center items-center" id="container" style="margin-top: 4%;">
+  
+   <img src="" id="bg"  style="width: 614px; height: 500px;" />          
+
+   <span class="rounded-lg font-mono   absolute text-black whitespace-pre-line" id="News" style="height:auto;  width: auto; max-width: 550px; line-height: 1.0em; 
+   display: inline-flex;background: rgba(0, 0, 0, 0.881);"  >
+      
+   <p class="text-base font-light leading-relaxed my-auto pb-auto   mx-4 text-white">
+  
+      {% if content %}
+      {{ content|safe }}
+     
+      {% else %}
+      No news updates available.
+      {% endif %}
+ 
+   </p>
+  </span>
+</div>
+
+
+    <div id="canvasWrapper" class="mb-10 w-screen flex justify-center items-center">
+  
+    <button  class="text-white p-2 rounded-md font-sans text-base md:text-xl bg-pink-500 border-0 py-2 px-8 focus:outline-none hover:bg-blue-600 rounded text-lg"   onclick='download()'   >Download Post</button>
+    <div style="width: 16px;"></div> <!-- Gap between buttons -->
+    
+    <button  class="text-white p-2 rounded-md font-sans text-base md:text-xl bg-pink-500 border-0 py-2 px-8 focus:outline-none hover:bg-blue-600 rounded text-lg"   onclick='CopyText()'   >Copy Text</button>
+             </div>
+
+
+
+
+
+
+
+      {% include 'footer.html' %}
+     

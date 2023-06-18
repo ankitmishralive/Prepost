@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+
+        {% if title %}
+        {{ title|safe }}      
+        {% else %}
+        Post
+        {% endif %}
+    </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="icon" href="/static/image/icon/favicon.ico" type="image/x-icon">
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body class='bg-black'  >
+
+<header class="text-gray-600 body-font">
+  <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+    <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0" href='/' >
+  
+      <span class="ml-3 text-xl text-white branding ">Prepost</span>
+    </a>
+    <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+      <a href='/api-documentation'><button  class="inline-flex items-center text-white bg-blue-500 border-0  py-1 px-3 focus:outline-none hover:bg-pink-500 rounded text-base mt-4 md:mt-0 branding">
+        API Documentation
+      </button>  </a> 
+   
+    </nav>
+   
+    <a href='/category'><button  class="inline-flex ml-4 items-center bg-gray-100 border-0  py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0 branding">Category
+      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+        <path d="M5 12h14M12 5l7 7-7 7"></path>
+      </svg>
+    </button>  </a> 
+  </div>
+</header>

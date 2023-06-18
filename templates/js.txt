@@ -1,0 +1,62 @@
+<script>
+    var newbg = document.getElementById("bg");
+    var background = new Image();
+    background.onload = function() {
+        newbg.src = this.src;
+    }
+    background.src = "static/image/" + (Math.floor(Math.random() * 8) + 1) + ".jpg";
+</script>
+
+
+<script src="/static/js/h2.min.js"></script>
+<script>
+    function download() {
+        var container = document.getElementById("container");
+        html2canvas(container, {
+            height: container.offsetHeight,
+            width: container.offsetWidth
+        }).then(canvas => {
+            var a = document.createElement('a');
+            a.href = canvas.toDataURL("image/jpeg").replace("image/jpeg", "image/octet-stream");
+            a.download = "YourPost.jpg";
+            a.click();
+        });
+    }
+
+</script>
+
+<script>
+    function CopyTextNotworking(){
+// Create a temporary textarea element
+ var copyText = document.getElementById("News");
+ // Select the text field
+ copyText.select();
+copyText.setSelectionRange(0, 99999); // For mobile devices
+ // Copy the text inside the text field
+ navigator.clipboard.writeText(copyText.value);
+ // Alert the copied text
+alert("Copied the text: " + copyText.value);
+    }
+
+
+    function CopyText() {
+        // Get the target element by ID
+        var targetElement = document.getElementById('News');     
+        // Create a temporary textarea element
+        var tempTextArea = document.createElement('textarea');
+        // Set the textarea value to the text content of the target element
+        tempTextArea.value = targetElement.textContent;
+        // Append the textarea to the document body
+        document.body.appendChild(tempTextArea);
+        // Select the text in the textarea
+        tempTextArea.select();
+        // Copy the selected text to the clipboard
+        document.execCommand('copy');
+        // Remove the temporary textarea
+        document.body.removeChild(tempTextArea);
+        // Optionally, display a notification or perform other actions
+        swal("Copied!", "Copied to clipboard", "success");
+      }
+      
+    
+</script>

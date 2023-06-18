@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Update</title>
+     <link rel="stylesheet" href="{{url_for('static',filename='css//style.css')}}">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    
+</head>
+<body  >
+    <nav style="background: #042743;">
+        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+          <div class="relative flex h-16 items-center justify-between">
+            <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+              <!-- Mobile menu button-->
+              <button type="button" class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <!--
+                  Icon when menu is closed.
+      
+                  Menu open: "hidden", Menu closed: "block"
+                -->
+                <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+                <!--
+                  Icon when menu is open.
+      
+                  Menu open: "block", Menu closed: "hidden"
+                -->
+                <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+       
+              <div class="hidden sm:ml-6 sm:block">
+                <div class="flex space-x-4">
+                  <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                  <a href="/" target="_blank" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">TechUpdate</a>
+      
+                  <a href="https://github.com/Ankkkyyyy/Automatic_PostMaker_FlaskApp" target="_blank" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Source Code</a>
+      
+                  <a href="https://ankkkyyyy.github.io/mylinks/" target="_blank" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">My Links</a>
+      
+                </div>
+              </div>
+            </div>
+           
+          </div>
+        </div>
+      
+        <!-- Mobile menu, show/hide based on menu state. -->
+        <div class="sm:hidden" id="mobile-menu">
+          <div class="space-y-1 px-2 pt-2 pb-3">
+            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+            <a href="/" target="_blank" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">TechUpdate</a>
+      
+            <a href="https://github.com/Ankkkyyyy/Automatic_PostMaker_FlaskApp" target="_blank" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Source Code</a>
+      
+            <a href="https://ankkkyyyy.github.io/mylinks/" target="_blank" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">My Links</a>
+    
+          </div>
+        </div>
+      </nav>
+      
+      <div class="relative overflow-hidden bg-cover bg-no-repeat" style="background-position: 50%; background-image: url('https://tecdn.b-cdn.net/img/new/slides/146.webp'); height: 350px; ">
+        <div class="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-fixed" style="background-color: rgba(0, 0, 0, 0.75);">
+          <div class="flex h-full items-center justify-center">
+            <div class="px-6 text-center text-white md:px-12">
+              <h1 class="mb-6 text-4xl md:text-5xl font-bold" style="margin-top: 4%;">Never Miss a Beat in the Tech World with TechUpdate</h1>
+              <h3 class="mb-8 text-2xl md:text-3xl font-bold">Your Gateway to the World of Tech News</h3>
+              <button type="button" class="inline-block rounded border-2 border-neutral-50 px-6 pt-2 pb-[6px] text-xs md:text-base font-medium uppercase leading-normal text-neutral-50 transition duration-150 ease-in-out hover:border-neutral-100 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-neutral-100 focus:border-neutral-100 focus:text-neutral-100 focus:outline-none focus:ring-0 active:border-neutral-200 active:text-neutral-200 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10" data-te-ripple-init data-te-ripple-color="light">
+                <a href="#container">Download the Latest Post for your Page</a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <h1 id='hed' class="text-center  text-4xl underline underline-offset-1 " style="color:white;' " >Stay Informed and Up-to-Date with the Latest and Most Exciting Tech World News - Download our Comprehensive Post Now!</h1>
+
+      <div class="bottom-6 m-auto relative lg-32 mb-10 w-screen flex justify-center items-center" id="container" style="margin-top: 4%;">
+        <img src="" id="bg" style="width: 614px; height: 600px;" />
+        <span class="font-mono text-lg md:text-xl absolute text-white whitespace-pre-line" id="News" style="width: 90%; max-width: 550px; line-height: 1.5em;  display: block;background: rgba(0, 0, 0, 0.881); ">
+          {{NewsUpdate|safe}}
+        </span>
+    </div>
+      
+      <div id="canvasWrapper" class="mb-10 w-screen flex justify-center items-center">
+        <button class="text-white p-2 rounded-md font-sans text-base md:text-xl bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500" onclick="download()">Download Post</button>
+      </div>
+
+
+      <footer class="mb-10 w-screen flex justify-center items-center">
+
+        <a href="https://www.linkedin.com/in/ankkkyyyy" class='underline underline-offset-1 ' target="_blank" style="color:white;' ">  Made with 💜 by Ankit Mishra </a>
+
+      </footer>
+
+      <style>
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 3xl;
+        }
+        h3 {
+          font-size: 2xl;
+        }
+        button {
+          font-size: base;
+        }
+        #News {
+          font-size: xl;
+        }
+      }
+
+      @keyframes move {
+        100% {
+            transform: translate3d(0, 0, 1px) rotate(360deg);
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+      #hed {
+        font-size: 2rem;
+        margin: 2rem 0 2rem;
+
+      }
+    }
+   
+      </style>
+      
+   
+
+
+</body>
+
+<script>
+    var newbg = document.getElementById("bg");
+    var background = new Image();
+    background.onload = function() {
+        newbg.src = this.src;
+    }
+    background.src = "static/image/"+(Math.floor(Math.random()*(8))+1)+".jpg";
+</script>
+
+<script src="/static/js/h2.min.js"></script>
+<script>
+    function download() {
+        var container = document.getElementById("container");
+        html2canvas(container, {
+            height: container.offsetHeight,
+            width: container.offsetWidth
+        }).then(canvas => {
+            var a = document.createElement('a');
+            a.href = canvas.toDataURL("image/jpeg").replace("image/jpeg", "image/octet-stream");
+            a.download = "YourPost.jpg";
+            a.click();
+        });
+    }
+</script>
+</html>
