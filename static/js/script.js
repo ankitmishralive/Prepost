@@ -63,7 +63,7 @@ function CopyText() {
     
 
       var aText = new Array(
-        "A Service for Content Creator & Seekers, Access Latest News in Real Time",
+        "A Service for Social Media Handlers & Content  Seekers, Access Latest News in Real Time",
         );
         var iSpeed = 40; // time delay of print out
         var iIndex = 0; // start printing array at this posision
