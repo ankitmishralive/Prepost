@@ -12,7 +12,8 @@
     }
 
     folder = document.URL
-    domain = "https://prepost.onrender.com/"
+    // domain = "https://prepost.onrender.com/"
+    domain = "https://www.prepost.neuralberg.com/"
     // folder = folder.replace("http://127.0.0.1:5000/","")
     folder = folder.replace(domain,"")
     // console.log(folder)
